@@ -237,13 +237,13 @@ body {
 }
 .h_left h2{
 	font-size: 1.5em;
-	color: #c0c0c0;
+	color: #000000;
 	font-weight: 400;
 }
 .h_left h3{
 	margin-top: 10px;
 	font-size: 0.8725em;
-	color: #c0c0c0;
+	color: #000000;
 }
 /* start soc_icons */
 .soc_icons {
