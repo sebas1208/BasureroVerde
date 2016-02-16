@@ -5,10 +5,23 @@ app.controller('HomeController', function($scope,ngDialog,ListaProductos){
 	$scope.abrirPopUpProducto = function(producto){
 		$scope.producto = producto;
 		ngDialog.open({
-            template: 'web/rutas/detallesProductoPopUp.html',
-            scope: $scope
-        });
+			template: 'web/rutas/detallesProductoPopUp.html',
+			scope: $scope
+		});
+	};
+
+	$scope.filtradoPorTipo = function(tipo){
+		console.log("hola");
+		if(tipo === 'Todos'){
+			$scope.listaProductos = ListaProductos.all();
+		}else{
+			$scope.listaProductos = ListaProductos.busquedaPorTipo(tipo);
+		}
 	}
+})
+
+.controller('NavController', function($scope){
+
 })
 
 .controller('AboutController', function($scope){

@@ -84,10 +84,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/-->
                     <h1><a href="#/home"><img src="web/images/basureroVerde.png" height="60" width="300" alt=""/></a></h1>
                 </div>
                 <div class="h_right">
-                    <ul class="menu">
-                        <li class="active"><a href="#/home">home</a></li>
-                        <li><a href="#/about">about</a></li>
-                        <li><a href="#/contacto">contact</a></li>
+                    <ul class="menu" ng-controller="NavController" ng-init="home='active'; about='';contact=''">
+                        <li ng-click="home='active'; about='';contact=''" class="{{home}}"><a href="#/home">home</a></li>
+                        <li ng-click="home=''; about='active';contact=''" class="{{about}}"><a href="#/about">about</a></li>
+                        <li ng-click="home=''; about='';contact='active'" class="{{contact}}"><a href="#/contacto">contact</a></li>
                     </ul>
 
                     <script src="web/js/classie.js"></script>
@@ -120,13 +120,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/-->
                 <div class="footer_top">
                     <div class="f_nav1">
                         <ul>
-                            <li><a ui-sref="index">home</a></li>
+                            <li><a ui-sref="home">home</a></li>
                             <li><a ui-sref="about">about</a></li>
                             <li><a ui-sref="contacto">Contact</a></li>
                         </ul>
                     </div>
                     <div class="copy">
-                        <p class="link"><span>© All rights reserved | Template by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></span></p>
+                        <p class="link"><span>© Escuela Politecnica Nacional - Ecologia y Medio Ambiente | Template by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></span></p>
                     </div>
                     <div class="clear"></div>
                 </div>

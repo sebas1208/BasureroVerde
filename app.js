@@ -23,3 +23,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller:'ContactoController'
         })
     });
+
+app.filter("sanitize", ['$sce', function($sce) {
+  return function(htmlCode){
+    return $sce.trustAsHtml(htmlCode);
+}
+}]);

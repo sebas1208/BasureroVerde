@@ -1,6 +1,8 @@
 <div>
-	<h1 style="text-align:center;">{{producto.nombre}} <small>{{producto.tipo}}</small></h1>
-	<center><img src="{{producto.imagen}}" alt="" width="0" height="0"></center>
-	<h1>{{producto.descripcion}}</h1>
+	<font color="{{producto.color}}"><span><h1 style="text-align:center;">{{producto.nombre}} <h2 style="text-align:center;">Tipo: {{producto.tipo}}</h2></h1></span></font>
+	<center><img ng-src="{{producto.imagen}}" alt="" width="200" height="200"></center>
+	<h3 align="justify"><strong>Reciclaje:</strong> <div ng-bind-html="producto.comoReciclar | sanitize"></div></h1>
+	<h3 align="justify"><strong>Como alargar la vida util:</strong> <div ng-bind-html="producto.comoAlargarVida | sanitize"></div></h1>
+	<h3 align="justify"><strong>Consecuencias de no hacerlo (daños al ambiente o a la salud):</strong> <div ng-bind-html="producto.consecuencias | sanitize"></div></h1>
 	<h5>Para mas informacion: <a href="{{producto.masInformacion}}">{{producto.masInformacion}}</a></h5>
 </div>
