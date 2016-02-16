@@ -1,0 +1,40 @@
+<style type="text/css">
+    #map {
+        height: 500px;
+        width: 1200px;
+    }
+    
+    .infoWindowContent {
+        font-size: 14px !important;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+    }
+    
+    h2 {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+</style>
+
+
+
+<div class="header_btm">
+    <div class="h_left">
+        <h3>
+            TODO
+        </h3>
+
+
+        <div ng-app="BasureroVerde" ng-controller="ContactoController">
+            <div id="map"></div>
+        </div>
+
+
+
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div ng-repeat="producto in listaProductos">
+    {{producto.nombre}}
+</div>
