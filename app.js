@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var app = angular.module('BasureroVerde', ['ui.router', 'toastr', 'uiGmapgoogle-maps']);
+=======
+var app = angular.module('BasureroVerde', ['ui.router','toastr','ngDialog']);
+>>>>>>> 21028e1da74eb941ebef5eecf4ef3f4475c50197
 
 
 app.config(function ($stateProvider, $urlRouterProvider) {
