@@ -5,6 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/-->
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<title>Basurero Verde</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -73,67 +74,65 @@ License URL: http://creativecommons.org/licenses/by/3.0/-->
 		});
 	</script>
 </head>
+
 <body ng-app="BasureroVerde">
-	<!-- start header -->
-	<div class="header_bg">
-		<div class="wrap">
-			<div class="header">
-				<div class="logo">
-					<h1><a href="index.html"><img src="web/images/basureroVerde.png" height="60" width="300" alt=""/></a></h1>
-				</div>
-				<div class="h_right">
-					<ul class="menu">
-						<li class="active"><a href="#/home">home</a></li>
-						<li><a href="#/about">about</a></li>
+    <!-- start header -->
+    <div class="header_bg">
+        <div class="wrap">
+            <div class="header">
+                <div class="logo">
+                    <h1><a href="#/home"><img src="web/images/basureroVerde.png" height="60" width="300" alt=""/></a></h1>
+                </div>
+                <div class="h_right">
+                    <ul class="menu">
+                        <li class="active"><a href="#/home">home</a></li>
+                        <li><a href="#/about">about</a></li>
+                        <li><a href="#/contacto">contact</a></li>
+                    </ul>
 
-						<li><a href="#/contacto">contact</a></li>
-					</ul>
+                    <script src="web/js/classie.js"></script>
+                    <!-- start smart_nav * -->
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="#/home">Home</a></li>
+                            <li class="nav-item"><a href="#/about">About</a></li>
+                            <li class="nav-item"><a href="#/contacto">Contact</a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </nav>
+                    <script type="text/javascript" src="web/js/responsive.menu.js"></script>
+                    <!-- end smart_nav * -->
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
 
-					<script src="web/js/classie.js"></script>
-					<!-- start smart_nav * -->
-					<nav class="nav">
-						<ul class="nav-list">
-							<li class="nav-item"><a href="index.html">Home</a></li>
-							<li class="nav-item"><a href="about.html">About</a></li>
-							<li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
-							<li class="nav-item"><a href="blog.html">Blog</a></li>
-							<li class="nav-item"><a href="contact.html">Contact</a></li>
-							<div class="clear"></div>
-						</ul>
-					</nav>
-					<script type="text/javascript" src="web/js/responsive.menu.js"></script>
-					<!-- end smart_nav * -->
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-	</div>
+    <div ui-view></div>
+    <!-- start main -->
 
-	<div ui-view></div>
-	<!-- start main -->
-
-	<div class="footer_bg">
-		<div class="wrap">
-			<div class="footer">
-				<div class="span_of_4">
-					<div class="clear"></div>
-				</div>
-				<div class="footer_top">
-					<div class="f_nav1">
-						<ul>
-							<li><a ui-sref="index">home</a></li>
-							<li><a ui-sref="about">about</a></li>
-							<li><a ui-sref="contacto">Contact</a></li>
-						</ul>
-					</div>
-					<div class="copy">
-						<p class="link"><span>© All rights reserved | Template by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></span></p>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="footer_bg">
+        <div class="wrap">
+            <div class="footer">
+                <div class="span_of_4">
+                    <div class="clear"></div>
+                </div>
+                <div class="footer_top">
+                    <div class="f_nav1">
+                        <ul>
+                            <li><a ui-sref="index">home</a></li>
+                            <li><a ui-sref="about">about</a></li>
+                            <li><a ui-sref="contacto">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        <p class="link"><span>© All rights reserved | Template by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></span></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<script type="text/javascript" src="web/js/lib/angular.min.js"></script>
 	<script type="text/javascript" src="web/js/lib/angular-toastr.tpls.js"></script>
@@ -145,4 +144,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/-->
 	<script type="text/javascript" src="web/controladores/home.js"></script>
 	<!-- start gallery -->
 </body>
+
 </html>
