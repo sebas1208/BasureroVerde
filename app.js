@@ -1,4 +1,4 @@
-var app = angular.module('BasureroVerde', ['ui.router','toastr']);
+var app = angular.module('BasureroVerde', ['ui.router','toastr','ngDialog']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 

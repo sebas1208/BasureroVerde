@@ -1,76 +1,48 @@
-<div class="header_btm">
-	<div class="h_left">
-		<h2>Basurero Verde</h2>
-		<h3>En esta página podrás encontrar información que te permitirá saber qué hacer con
+<div class="container">
+	<div class="h_left jumbotron">
+		<h2>En esta página podrás encontrar información que te permitirá saber qué hacer con
 			los productos en desuso que se generan en tu hogar o en cualquier lugar en el que
 			te encuentres.
-		</h3>
+		</h2>
 	</div>
 	<div class="clear"></div>
 </div>
 
-<div ng-repeat="producto in listaProductos">
-	{{producto.nombre}}
-</div>
+<br><br>
 
 <div class="main_bg">
 	<div class="wrap">
 		<div class="main">
-			<!-- start popup -->
-			<div id="papel-dialog" class="mfp-hide small-dialog">
-				<div class="pop_up">
-					<h2>PAPEL</h2>
-					<img src="web/images/papel.jpg" height="300" width="650" title="image-name">
-					<p style="color: black">Aqui ira la descripcion de lo que debemos hacer con el papel</p>
-					<a class="btn" href="details.html">Aprende Mas</a>
-				</div>
-			</div>
-			<div id="plastico-dialog" class="mfp-hide small-dialog">
-				<div class="pop_up">
-					<h2>PLÁSTICO</h2>
-					<img src="web/images/plastico.jpg" height="300" width="650" title="image-name">
-					<p style="color: black">PLASTICO</p>
-					<a class="btn" href="details.html">Aprende Mas</a>
-				</div>
-			</div>
 			<!-- end popup -->
 			<!-- start gallery  -->
 			<div class="container">
 				<ul id="filters" class="clearfix">
-					<li><span class="filter active" data-filter="app card icon logo web">Todos</span></li> /
-					<li><span class="filter" data-filter="card logo">Papel-Cartón</span></li> /
-					<li><span class="filter" data-filter="card app web icon">Plástico</span></li>
+					<li><h3><a href=""><font color="white">Todos</font></a></h3></li> /
+					<li><h3><a href=""><font color="white">Papel-Cartón</font></a></h3></li> /
+					<li><h3><a href=""><font color="white">Plástico</font></a></h3></li>
 				</ul>
-				<div id="portfoliolist">
-					<a class="popup-with-zoom-anim" href="#papel-dialog">
+				<div class="row">
+					<div class="col-xs-6 col-md-3" ng-repeat="producto in listaProductos">
+						<a ng-click="abrirPopUpProducto(producto)" href="" class="thumbnail">
+							<img ng-src="{{producto.imagen}}" height="300" width="300" alt="Papel" />
+						</a>
+					</div>
+				</div>
+				<!-- <div>
+					<a class="popup-with-zoom-anim" ng-repeat="producto in listaProductos" ng-click="abrirPopUpProducto(producto)">
 						<div class="portfolio logo" data-cat="logo">
 							<div class="portfolio-wrapper">
-								<img src="web/images/papel.jpg" height="180" width="270" alt="Papel" />
+								<img ng-src="{{producto.imagen}}" height="300" width="300" alt="Papel" />
 								<div class="label">
 									<div class="label-text">
-										<p class="text-title">Papel</p>
-										<span class="text-category">Azul</span>
+										<h2>{{producto.nombre}}</h2>
 									</div>
 									<div class="label-bg"></div>
 								</div>
 							</div>
 						</div>
 					</a>
-					<a class="popup-with-zoom-anim" href="#plastico-dialog">
-						<div class="portfolio app" data-cat="app">
-							<div class="portfolio-wrapper">
-								<img src="web/images/plastico.jpg" height="180" width="270" alt="Plastico" />
-								<div class="label">
-									<div class="label-text">
-										<p class="text-title">Visual Infography</p>
-										<span class="text-category">APP</span>
-									</div>
-									<div class="label-bg"></div>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
+				</div> -->
 			</div><!-- end container -->
 		</div>
 	</div>

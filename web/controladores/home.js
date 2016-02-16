@@ -1,7 +1,14 @@
-app.controller('HomeController', function($scope,ListaProductos){
+app.controller('HomeController', function($scope,ngDialog,ListaProductos){
 	console.log("Hola");
 	$scope.listaProductos = ListaProductos.all();
-	console.log(ListaProductos.all());
+
+	$scope.abrirPopUpProducto = function(producto){
+		$scope.producto = producto;
+		ngDialog.open({
+            template: 'web/rutas/detallesProductoPopUp.html',
+            scope: $scope
+        });
+	}
 })
 
 .controller('AboutController', function($scope){

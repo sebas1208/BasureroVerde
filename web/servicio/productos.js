@@ -2,10 +2,19 @@ app.factory('ListaProductos', function(){
 	var listaProductos = [
 	{
 		id:0,
-		nombre:'Papel',
+		nombre:'Hojas',
 		imagen: 'http://www.inforeciclaje.com/imagenes/papel-reciclado.jpg',
 		descripcion: 'El papel es dificil de reciclar',
-		masInformacion: 'google.com'
+		masInformacion: 'google.com',
+		tipo: 'Papel'
+	},
+	{
+		id:0,
+		nombre:'Plastico',
+		imagen: 'http://www.inforeciclaje.com/imagenes/papel-reciclado.jpg',
+		descripcion: 'El papel es dificil de reciclar',
+		masInformacion: 'google.com',
+		tipo: 'Papel'
 	}
 	];
 
